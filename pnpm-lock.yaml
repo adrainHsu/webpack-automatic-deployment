@@ -5,15 +5,30 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  console-color-mr:
+    specifier: ^2.0.2
+    version: 2.0.2
   node-ssh:
     specifier: ^13.1.0
     version: 13.1.0
+
+devDependencies:
+  '@types/node':
+    specifier: ^20.4.5
+    version: 20.4.5
+  typescript:
+    specifier: ^5.1.6
+    version: 5.1.6
 
 packages:
 
   /@types/node@18.17.1:
     resolution: {integrity: sha512-xlR1jahfizdplZYRU59JlUx9uzF1ARa8jbhM11ccpCJya8kvos5jwdm2ZAgxSCwOl0fq21svP18EVwPBXMQudw==}
     dev: false
+
+  /@types/node@20.4.5:
+    resolution: {integrity: sha512-rt40Nk13II9JwQBdeYqmbn2Q6IVTA5uPhvSO+JVqdXw/6/4glI6oR9ezty/A9Hg5u7JH4OmYmuQ+XvjKm0Datg==}
+    dev: true
 
   /@types/ssh2@1.11.13:
     resolution: {integrity: sha512-08WbG68HvQ2YVi74n2iSUnYHYpUdFc/s2IsI0BHBdJwaqYJpWlVv9elL0tYShTv60yr0ObdxJR5NrCRiGJ/0CQ==}
@@ -39,6 +54,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /console-color-mr@2.0.2:
+    resolution: {integrity: sha512-uhDBJ1lEmIEw3nhWcYaHeWDPH+SgDIfLk3E7c0lw4mV9y7SC61ARmhat8B86Lm3uBIXsmwU57PtHCvAXTC2HXg==}
+    dev: false
 
   /cpu-features@0.0.8:
     resolution: {integrity: sha512-BbHBvtYhUhksqTjr6bhNOjGgMnhwhGTQmOoZGD+K7BCaQDCuZl/Ve1ZxUSMRwVC4D/rkCPQ2MAIeYzrWyK7eEg==}
@@ -121,3 +140,9 @@ packages:
   /tweetnacl@0.14.5:
     resolution: {integrity: sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA==}
     dev: false
+
+  /typescript@5.1.6:
+    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true

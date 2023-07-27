@@ -1,10 +1,13 @@
 {
   "name": "webpack-automatic-deployment",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "webpack把代码打包后自动布署到服务器中",
-  "main": "main.js",
+  "main": "./dist/main.js",
+  "types": "./dist/main.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "release": "tsc && npm publish"
   },
   "repository": {
     "type": "git",
@@ -12,7 +15,8 @@
   },
   "keywords": [
     "自动布署",
-    "webpack自动布署",
+    "自动化布署",
+    "webpack自动化布署",
     "auto",
     "upload",
     "auto",
@@ -27,6 +31,11 @@
   },
   "homepage": "https://github.com/adrainHsu/webpack-automatic-deployment#readme",
   "dependencies": {
+    "console-color-mr": "^2.0.2",
     "node-ssh": "^13.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "typescript": "^5.1.6"
   }
 }
