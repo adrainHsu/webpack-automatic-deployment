@@ -16,7 +16,7 @@ npm install webpack-automatic-deployment --save-dev
 ```
 
 ### Usage 使用
----
+
 This plugin will delete the files on the server for you and upload the packaged files to the server. Just add the plugin to your webpack config as follows:
 该插件将为您把服务器上的文件删除，并把打包后的文件上传到服务器中，只需要您将插件添加到 webpack 配置中，如下所示:
 
@@ -32,7 +32,7 @@ module.exports = {
 ```
 
 ### Options 配置
----
+
 You can pass a hash of configuration options to webpack-automatic-deployment. Allowed values are as follows:
 您可以将配置的选项传递给 webpack-automatic-deployment 插件。允许的值如下：
 
