@@ -1,8 +1,8 @@
 # webpack-automatic-deployment
 
-<div style="text-align: center">
-<img width="600" src="./src/assets/images/auto_header.png" alt="webpack-automatic-deployment" />
-</div>
+<p align="center">
+<img width="730" src="./src/assets/images/auto_header.png" alt="webpack-automatic-deployment" />
+</p>
 
 > webpack把代码打包后自动布署到服务器中
 process.env.NODE_ENV === "production" 时才会打包上传
