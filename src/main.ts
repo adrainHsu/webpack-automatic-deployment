@@ -13,7 +13,6 @@ class WebpackAutomaticDeployment {
   }
   apply(compiler: TypeCompiler) {
     // console.log("AutoUploadWebpackPlugin");
-    console.debug(makeMulti(strLog));
     // 完成的事件：注册hooks的监听事件
     // 等到assets已经输出到output目录上时，完成自动上传的功能
     compiler.hooks.afterEmit.tapAsync(
@@ -23,6 +22,7 @@ class WebpackAutomaticDeployment {
           callback();
           return;
         }
+        console.debug(makeMulti(strLog));
         // 1.获取输出文件夹路径(其中资源)
         const outputPath = compilation.outputOptions.path;
         console.info(
@@ -71,6 +71,7 @@ class WebpackAutomaticDeployment {
           callback();
         } catch (err) {
           console.error("服务器连接错误，请检配置参数是否正确");
+          console.error(err);
           console.info(
             "====================  automatic-deployment end  ===================="
           );
@@ -85,7 +86,7 @@ class WebpackAutomaticDeployment {
       host: this.options.host,
       username: this.options.username,
       password: this.options.password,
-      port: this.options.password || 22,
+      port: this.options.port || 22,
     });
   }
 

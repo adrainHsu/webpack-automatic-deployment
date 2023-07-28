@@ -2,8 +2,8 @@
   "name": "webpack-automatic-deployment",
   "version": "1.0.0",
   "description": "webpack把代码打包后自动布署到服务器中",
-  "main": "./dist/main.js",
-  "types": "./dist/main.d.ts",
+  "main": "./lib/main.js",
+  "types": "./lib/main.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
@@ -30,7 +30,7 @@
     "url": "https://github.com/adrainHsu/webpack-automatic-deployment/issues"
   },
   "files": [
-    "dist/*"
+    "lib/*"
   ],
   "homepage": "https://github.com/adrainHsu/webpack-automatic-deployment#readme",
   "dependencies": {
