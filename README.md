@@ -11,6 +11,10 @@ process.env.NODE_ENV === "production" 时才会打包上传
 
 ```console
 npm install webpack-automatic-deployment --save-dev
+# OR
+yarn add webpack-automatic-deployment --dev
+# OR
+pnpm add webpack-automatic-deployment --save-dev
 ```
 
 ## Usage 使用
