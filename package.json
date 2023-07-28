@@ -1,6 +1,6 @@
 {
   "name": "webpack-automatic-deployment",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "webpack把代码打包后自动布署到服务器中",
   "main": "./dist/main.js",
   "types": "./dist/main.d.ts",
@@ -29,6 +29,9 @@
   "bugs": {
     "url": "https://github.com/adrainHsu/webpack-automatic-deployment/issues"
   },
+  "files": [
+    "dist/*"
+  ],
   "homepage": "https://github.com/adrainHsu/webpack-automatic-deployment#readme",
   "dependencies": {
     "console-color-mr": "^2.0.2",

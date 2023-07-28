@@ -34,12 +34,13 @@ module.exports = {
 You can pass a hash of configuration options to webpack-automatic-deployment. Allowed values are as follows:
 您可以将配置的选项传递给 webpack-automatic-deployment 插件。允许的值如下：
 
-|Name键名|Type类型|Description描述|
-|:--:|:--:|:----------|
-|**`host`**|**ServerIP/服务器IP**|example/例: 123.123.123.124|
-|**`username`**|**ServerUsers/服务器用户名**|example/例: root|
-|**`password`**|**ServerPassword/服务器密码**|example/例: ****|
-|**`remotePath`**|**ProjectPath/项目路径**|example/例: /root/www/project_demo|
+|Name键名|Explain说明|Type类型|Description描述|
+|:--:|:--:|:--:|:----------|
+|**`host`**|**ServerIP/服务器IP**|**`{string}`**|example/例: 123.123.123.124|
+|**`port`**|**ServerPort/服务器端口**|**`{number}`**|default: 22|
+|**`username`**|**ServerUsers/服务器用户名**|**`{string}`**|example/例: root|
+|**`password`**|**ServerPassword/服务器密码**|**`{string}`**|example/例: ****|
+|**`remotePath`**|**ProjectPath/项目路径**|**`{string}`**|example/例: /root/www/project_demo|
 
 Here's an example webpack config illustrating how to use these options
 下面是一个示例 webpack 配置，说明如何使用这些选项
