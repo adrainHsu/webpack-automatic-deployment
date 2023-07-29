@@ -5,8 +5,8 @@ import { makeMulti, strLog } from "./stringLog";
 import {ConfigOptions,TypeCompilation,TypeCompiler } from "./types";
 
 class WebpackAutomaticDeployment {
-  options: ConfigOptions;
-  ssh: any;
+  private options: ConfigOptions;
+  private ssh: any;
   constructor(options: ConfigOptions) {
     this.ssh = new NodeSSH();
     this.options = options;
@@ -81,7 +81,7 @@ class WebpackAutomaticDeployment {
     );
   }
 
-  async connectServer() {
+  private async connectServer() {
     await this.ssh.connect({
       host: this.options.host,
       username: this.options.username,
@@ -90,7 +90,7 @@ class WebpackAutomaticDeployment {
     });
   }
 
-  async uploadFiles(localPath: string, remotePath: string) {
+  private async uploadFiles(localPath: string, remotePath: string) {
     const status = await this.ssh.putDirectory(localPath, remotePath, {
       recursive: true, //递归上传
       concurrency: 10, //并发上传
