@@ -32,7 +32,6 @@ module.exports = {
   ]
 }
 ```
-
 ## Options 配置
 
 You can pass a hash of configuration options to webpack-automatic-deployment. Allowed values are as follows:
@@ -49,7 +48,7 @@ You can pass a hash of configuration options to webpack-automatic-deployment. Al
 Here's an example webpack config illustrating how to use these options
 下面是一个示例 webpack 配置，说明如何使用这些选项
 
-**webpack.config.js**
+webpack使用方法：配置**webpack.config.js**
 ```js
 {
   plugins: [
@@ -63,10 +62,30 @@ Here's an example webpack config illustrating how to use these options
 }
 ```
 
+vue cli使用方法：配置**vue.config.js**
+```js
+const WebpackAutomaticDeployment = require("webpack-automatic-deployment");
+
+module.exports = {
+  plugins: [new WebpackAutomaticDeployment({
+      host: 'your server ip',
+      username: 'your server users',
+      password: 'your server password',
+      remotePath: 'your project path on the server '
+    })],
+};
+
+```
+
+🔥 After configuration, run the **npm run build** command to automatically upload and deploy the code to the server after packaging
+
+💪 配置好后，运行 **npm run build** 命令即可实现代码打包后自动上传部署至服务器
+
 ⚠️ **Attention：**
 * 1.The configuration in the project should have process.env.NODE_ ENV is the value of production, otherwise the plugin will not take effect
 * 2.The project path on the server needs to be specified to the project folder, as the folder will be deleted before each upload
 
 ⚠️ **特别注意：**
 * 1.项目中配置的要有process.env.NODE_ENV为production的值，否则插件不会生效
-* 2.服务器上的项目路径要指定到项目文件夹，因为每次上传前会先删除文件夹
+* 2.服务器上的项目路径要指定到**项目文件夹**，因为每次上传前会先删除文件夹
+     + 如：您项目上传服务器的地址为：/root/www，你的项目文件夹名为 project_demo，那么对应配置的时候remotePath的值应为：/root/www/project_demo
