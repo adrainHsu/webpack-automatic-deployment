@@ -22,7 +22,7 @@ pnpm add webpack-automatic-deployment --save-dev
 This plugin will delete the files on the server for you and upload the packaged files to the server. Just add the plugin to your webpack config as follows:
 该插件将为您把服务器上的文件删除，并把打包后的文件上传到服务器中，只需要您将插件添加到 webpack 配置中，如下所示:
 
-**webpack.config.js**
+webpack使用方法：配置**webpack.config.js**
 ```js
 const WebpackAutomaticDeployment = require('webpack-automatic-deployment')
 
@@ -31,6 +31,18 @@ module.exports = {
     new WebpackAutomaticDeployment(Options)
   ]
 }
+```
+
+vue cli使用方法：配置**vue.config.js**
+```js
+const WebpackAutomaticDeployment = require("webpack-automatic-deployment");
+
+module.exports = {
+  configureWebpack: {
+    new WebpackAutomaticDeployment(Options)
+  }
+};
+
 ```
 ## Options 配置
 
@@ -67,12 +79,14 @@ vue cli使用方法：配置**vue.config.js**
 const WebpackAutomaticDeployment = require("webpack-automatic-deployment");
 
 module.exports = {
-  plugins: [new WebpackAutomaticDeployment({
+  configureWebpack: {
+    plugins: [new WebpackAutomaticDeployment({
       host: 'your server ip',
       username: 'your server users',
       password: 'your server password',
       remotePath: 'your project path on the server '
     })],
+  }
 };
 
 ```
